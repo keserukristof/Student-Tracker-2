@@ -1,0 +1,49 @@
+$btn-default-color: white;
+$btn-bg-color-primary: rgba(94, 156, 153, 0.8);
+$btn-bg-color-primary-hover: rgba(94, 156, 153, 1);
+$btn-bg-color-warning: rgba(156, 93, 109, 0.8);
+$btn-bg-color-warning-hover: rgba(156, 93, 109, 1);
+$btn-bg-color-disabled: rgba(161, 161, 161, 0.8);
+$btn-bg-color-disabled-hover: rgba(161, 161, 161, 1);
+$ease-in-out-transition: all 0.2s ease-in-out;
+
+@mixin button-base {
+    color: $btn-default-color;
+    border: none;
+    padding: 0.625rem 1.25rem;
+    text-align: center;
+    font-size: 1rem;
+    margin: 0.25rem 0.125rem;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+.primary {
+    @include button-base;
+    background-color: $btn-bg-color-primary;
+
+    &:hover {
+        transition: $ease-in-out-transition;
+        background-color: $btn-bg-color-primary-hover;
+    }
+}
+
+.warning {
+    @include button-base;
+    background-color: $btn-bg-color-warning;
+
+    &:hover {
+        transition: $ease-in-out-transition;
+        background-color: $btn-bg-color-warning-hover;
+    }
+}
+
+.disabled {
+    @include button-base;
+    background-color: #cccccc;
+
+    &:hover {
+        transition: $ease-in-out-transition;
+        background-color: $btn-bg-color-disabled-hover;
+    }
+}
