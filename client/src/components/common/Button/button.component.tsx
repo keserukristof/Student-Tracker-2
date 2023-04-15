@@ -6,17 +6,15 @@ export interface ButtonProps {
   label: string;
   onClick: () => void;
   variant: ButtonVariant;
-  disabled?: boolean;
 }
 
 export const Button: FunctionComponent<ButtonProps> = ({
   label,
   onClick,
   variant,
-  disabled = false,
 }) => {
   const handleClick = () => {
-    if (!disabled) {
+    if (variant !== 'disabled') {
       onClick();
     }
   };
