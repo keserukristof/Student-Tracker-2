@@ -3,4 +3,3 @@ export interface NavbarItem {
     href: string;
     icon: JSX.Element;
 }
-
