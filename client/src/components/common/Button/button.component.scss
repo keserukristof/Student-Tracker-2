@@ -4,7 +4,7 @@ $btn-bg-color-warning: rgba(156, 93, 109, 0.8);
 $btn-bg-color-warning-hover: rgba(156, 93, 109, 1);
 $btn-bg-color-disabled: rgba(161, 161, 161, 0.8);
 $btn-bg-color-disabled-hover: rgba(161, 161, 161, 1);
-$ease-in-out-transition: all 0.2s ease-in-out;
+$ease-in-out-transition: all 0.3s ease-in-out;
 
 @mixin button-base {
     color: white;
