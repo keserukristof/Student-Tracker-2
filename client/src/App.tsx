@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react';
-import { Layout } from './components/common/Layout/layout.component';
+import { Layout } from './components/app-shell/Layout/layout.component';
 
 const App: FunctionComponent = () => {
   return (
