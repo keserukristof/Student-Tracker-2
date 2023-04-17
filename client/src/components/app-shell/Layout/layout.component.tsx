@@ -1,24 +1,22 @@
 import { FunctionComponent } from "react";
 import './layout.component.scss';
 
+import { Routes, Route } from "react-router-dom";
+
+import { Home } from '../../pages/Home/home.component';
+import { StudentTracker } from '../../pages/StudentTracker/student-tracker.component';
 import { Sidebar } from '../Sidebar/sidebar.component';
 import { Header } from "../Header/header.component";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faUsers } from '@fortawesome/free-solid-svg-icons';
 
-export interface LayoutProps {
-    children: JSX.Element;
-}
-
 const sideBarItems = [
     { title: 'Home', href: '/', icon: <FontAwesomeIcon icon={faHouse} /> },
     { title: 'Student tracker', href: '/student-tracker', icon: <FontAwesomeIcon icon={faUsers} /> },
 ];
 
-export const Layout: FunctionComponent<LayoutProps> = ({
-    children,
-}) => {
+export const Layout: FunctionComponent = () => {
     return (
         <div className="layout">
             <div className="header">
@@ -28,7 +26,10 @@ export const Layout: FunctionComponent<LayoutProps> = ({
                 <Sidebar sidebarItems={sideBarItems} />
             </div>
             <div className="content">
-                {children}
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/student-tracker" element={<StudentTracker />} />
+                </Routes>
             </div>
         </div>
     );

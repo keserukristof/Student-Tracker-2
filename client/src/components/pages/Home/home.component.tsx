@@ -3,11 +3,8 @@ import './home.component.scss';
 
 import { Widget } from '../../common/Widget/widget.component';
 
-export interface HomeProps {
-    title: string;
-}
 
-export const Home: FunctionComponent<HomeProps> = ({ title }) => {
+export const Home: FunctionComponent = () => {
     return (
         <div className='home-page'>
             <div className='student-widget'>
@@ -40,7 +37,6 @@ export const Home: FunctionComponent<HomeProps> = ({ title }) => {
                     <div>EXAMPLE TEXT</div>
                 </Widget>
             </div>
-            
         </div>
     );
 };

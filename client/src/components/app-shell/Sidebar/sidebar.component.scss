@@ -1,8 +1,8 @@
-$nav_bg_color: #f9fbfa;
+$nav_background_color: #f9fbfa;
 $nav_box_shadow_color: rgba(0, 0, 0, 0.2);
 $nav_link_color: rgb(105, 105, 105);
 $nav_link_hover_color: black;
-$nav_underline_hover_color: rgba(94, 156, 153, 0.3);
+$nav_background_hover_color: rgba(94, 156, 153, 0.3);
 $ease_in_out_transition: all 0.3s ease-in-out;
 
 nav {
@@ -12,8 +12,8 @@ nav {
   align-items: center;
   height: 100vh;
   width: 15rem;
-  background-color: $nav_bg_color;
-  box-shadow: 0px 4px 8px $nav_underline_hover_color;
+  background-color: $nav_background_color;
+  box-shadow: 0px 4px 8px $nav_background_hover_color;
 
   ul {
     display: flex;
@@ -23,7 +23,7 @@ nav {
     width: 100%;
     margin-top: 5px;
 
-    a {
+    .nav-link {
       color: $nav_link_color;
       text-decoration: none;
       font-size: 18px;
@@ -52,12 +52,12 @@ nav {
         left: -100%;
         width: 100%;
         height: 100%;
-        background-color: $nav_underline_hover_color;
+        background-color: $nav_background_hover_color;
         transition: $ease_in_out_transition;
         z-index: 1;
       }
 
-      &:hover:before {
+      &:hover:before{
         left: 0;
       }
 
@@ -73,6 +73,10 @@ nav {
           margin-right: 0.75rem;
         }
       }
+    }
+
+    .active-nav-item {
+      background-color: $nav_background_hover_color;
     }
   }
 }
