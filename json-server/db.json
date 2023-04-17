@@ -1,6 +1,196 @@
 {
-    "users": [
-      { "id": 1, "name": "John" },
-      { "id": 2, "name": "Jane" }
-    ]
-  }
+  "students": [
+    {
+      "id": "1",
+      "firstName": "John",
+      "lastName": "Doe",
+      "age": 15,
+      "gender": "male",
+      "class": "10th Grade",
+      "enrollmentDate": "2020-08-15",
+      "contactInfo": {
+        "email": "johndoe@example.com",
+        "phone": "555-555-5555",
+        "address": "123 Main St, Anytown, USA"
+      },
+      "guardianInfo": {
+        "name": "Jane Doe",
+        "relationship": "Mother",
+        "contactInfo": {
+          "email": "janedoe@example.com",
+          "phone": "555-555-5556"
+        }
+      },
+      "academicPerformance": [
+        {
+          "subject": "Math",
+          "grade": "A"
+        },
+        {
+          "subject": "English",
+          "grade": "B"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "firstName": "Sophia",
+      "lastName": "Miller",
+      "age": 14,
+      "gender": "female",
+      "class": "9th Grade",
+      "enrollmentDate": "2021-08-15",
+      "contactInfo": {
+        "email": "sophiamiller@example.com",
+        "phone": "555-111-2345",
+        "address": "200 Maple Dr, Anytown, USA"
+      },
+      "guardianInfo": {
+        "name": "Sarah Miller",
+        "relationship": "Mother",
+        "contactInfo": {
+          "email": "sarahmiller@example.com",
+          "phone": "555-111-2346"
+        }
+      },
+      "academicPerformance": [
+        {
+          "subject": "Math",
+          "grade": "B"
+        },
+        {
+          "subject": "English",
+          "grade": "A"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "firstName": "Lucas",
+      "lastName": "Smith",
+      "age": 15,
+      "gender": "male",
+      "class": "10th Grade",
+      "enrollmentDate": "2021-08-11",
+      "contactInfo": {
+        "email": "lucassmith@example.com",
+        "phone": "555-222-3456",
+        "address": "150 Pine St, Anytown, USA"
+      },
+      "guardianInfo": {
+        "name": "Elizabeth Smith",
+        "relationship": "Mother",
+        "contactInfo": {
+          "email": "elizabethsmith@example.com",
+          "phone": "555-222-3457"
+        }
+      },
+      "academicPerformance": [
+        {
+          "subject": "Math",
+          "grade": "C"
+        },
+        {
+          "subject": "English",
+          "grade": "A"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "firstName": "Emma",
+      "lastName": "Johnson",
+      "age": 16,
+      "gender": "female",
+      "class": "11th Grade",
+      "enrollmentDate": "2020-08-17",
+      "contactInfo": {
+        "email": "emmajohnson@example.com",
+        "phone": "555-333-6789",
+        "address": "450 Oak St, Anytown, USA"
+      },
+      "guardianInfo": {
+        "name": "William Johnson",
+        "relationship": "Father",
+        "contactInfo": {
+          "email": "williamjohnson@example.com",
+          "phone": "555-333-6790"
+        }
+      },
+      "academicPerformance": [
+        {
+          "subject": "Math",
+          "grade": "B"
+        },
+        {
+          "subject": "English",
+          "grade": "A"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "firstName": "Michael",
+      "lastName": "Brown",
+      "age": 14,
+      "gender": "male",
+      "class": "9th Grade",
+      "enrollmentDate": "2021-08-14",
+      "contactInfo": {
+        "email": "michaelbrown@example.com",
+        "phone": "555-444-5678",
+        "address": "300 Willow St, Anytown, USA"
+      },
+      "guardianInfo": {
+        "name": "Laura Brown",
+        "relationship": "Mother",
+        "contactInfo": {
+          "email": "laurabrown@example.com",
+          "phone": "555-444-5679"
+        }
+      },
+      "academicPerformance": [
+        {
+          "subject": "Math",
+          "grade": "A"
+        },
+        {
+          "subject": "English",
+          "grade": "B"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "firstName": "Olivia",
+      "lastName": "Taylor",
+      "age": 15,
+      "gender": "female",
+      "class": "10th Grade",
+      "enrollmentDate": "2021-08-10",
+      "contactInfo": {
+        "email": "oliviataylor@example.com",
+        "phone": "555-555-9876",
+        "address": "375 Elm St, Anytown, USA"
+      },
+      "guardianInfo": {
+        "name": "David Taylor",
+        "relationship": "Father",
+        "contactInfo": {
+          "email": "davidtaylor@example.com",
+          "phone": "555-555-9877"
+        }
+      },
+      "academicPerformance": [
+        {
+          "subject": "Math",
+          "grade": "C"
+        },
+        {
+          "subject": "English",
+          "grade": "A"
+        }
+      ]
+    }
+  ]
+}
