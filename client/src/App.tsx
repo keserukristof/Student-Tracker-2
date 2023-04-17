@@ -1,12 +1,13 @@
 import { FunctionComponent } from 'react';
 import { Layout } from './components/app-shell/Layout/layout.component';
+import { Home } from './components/pages/Home/home.component';
 
 const App: FunctionComponent = () => {
   return (
     <>
-      <Layout
-        children={<div>ASD</div>}
-      />
+      <Layout>
+        <Home title="Home" />
+      </Layout>
     </>
   );
 };

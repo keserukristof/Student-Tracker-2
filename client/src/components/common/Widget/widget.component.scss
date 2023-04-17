@@ -1,0 +1,20 @@
+$widget-box-shadow-color: rgb(94, 156, 153, 0.6);
+
+.card {
+    flex-basis: auto;
+    min-width: 300px;
+    background-color: white;
+    box-shadow: 0px 4px 8px $widget-box-shadow-color;
+    border-radius: 2%;
+    margin: 1rem;
+
+    h2 {
+        text-align: center;
+        margin: 0;
+        padding: 0.75rem;
+    }
+
+    .card-content {
+        padding: 0.75rem;
+    }
+}
