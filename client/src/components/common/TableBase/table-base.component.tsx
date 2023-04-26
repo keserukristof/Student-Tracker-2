@@ -1,17 +1,17 @@
 import React, { FunctionComponent } from "react";
-import "./ConfigurableTable.scss";
+import "./table-base.component.scss";
 
-export interface TableColumn {
+export interface TableBaseColumn {
   key: string;
   header: string;
 }
 
-export interface ConfigurableTableProps {
-  columns: TableColumn[];
+export interface TableBaseProps {
+  columns: TableBaseColumn[];
   data: Record<string, any>[];
 }
 
-export const ConfigurableTable: FunctionComponent<ConfigurableTableProps> = ({
+export const TableBase: FunctionComponent<TableBaseProps> = ({
   columns,
   data,
 }) => {

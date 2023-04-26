@@ -1,0 +1,38 @@
+.configurable-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+  
+    thead {
+      tr {
+        background-color: #f2f2f2;
+        border-bottom: 1px solid #ddd;
+      }
+      
+      th {
+        padding: 8px;
+        text-align: left;
+        font-weight: bold;
+      }
+    }
+  
+    tbody {
+      tr {
+        &:nth-child(even) {
+          background-color: #f9f9f9;
+        }
+        
+        &:hover {
+          background-color: #e6e6e6;
+          cursor: pointer;
+        }
+      }
+      
+      td {
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+      }
+    }
+  }
+  
