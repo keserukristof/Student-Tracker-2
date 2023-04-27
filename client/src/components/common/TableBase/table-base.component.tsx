@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from "react";
 import "./table-base.component.scss";
+import { Button } from "../../app-shell/Button/button.component";
 
 export interface TableBaseColumn {
   key: string;
@@ -9,11 +10,15 @@ export interface TableBaseColumn {
 export interface TableBaseProps {
   columns: TableBaseColumn[];
   data: Record<string, any>[];
+  onDeleteStudent?: (studentId: string) => void;
+  deletableRows?: boolean;
 }
 
 export const TableBase: FunctionComponent<TableBaseProps> = ({
   columns,
   data,
+  onDeleteStudent,
+  deletableRows = true,
 }) => {
   return (
     <table className="configurable-table">
@@ -22,6 +27,7 @@ export const TableBase: FunctionComponent<TableBaseProps> = ({
           {columns.map((column) => (
             <th key={column.key}>{column.header}</th>
           ))}
+          {deletableRows && <th key={"delelteButton"}></th>}
         </tr>
       </thead>
       <tbody>
@@ -30,6 +36,11 @@ export const TableBase: FunctionComponent<TableBaseProps> = ({
             {columns.map((column) => (
               <td key={`${rowIndex}-${column.key}`}>{row[column.key]}</td>
             ))}
+            {deletableRows && (
+              <td className="delete-btn-container">
+                <Button label="X" variant="warning" onClick={() => onDeleteStudent && onDeleteStudent(row.id)}/>
+              </td>
+            )}
           </tr>
         ))}
       </tbody>

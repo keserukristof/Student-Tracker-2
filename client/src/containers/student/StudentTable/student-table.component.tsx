@@ -1,24 +1,22 @@
-import { FunctionComponent, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchStudents } from '../../../slices/student.slice';
-import { AppDispatch, RootState } from '../../../store';
+import { FunctionComponent } from 'react';
 
 import { TableBase, TableBaseColumn } from "../../../components/common/TableBase/table-base.component";
+import { useGetStudentsQuery, useDeleteStudentMutation } from '../../../apis/student.api';
 
 export const StudentTable: FunctionComponent = () => {
-  const dispatch = useDispatch<AppDispatch>();
-  const students = useSelector((state: RootState) => state.students.students);
+  const { data, refetch } = useGetStudentsQuery();
+  const [deleteStudent] = useDeleteStudentMutation();
 
-  useEffect(() => {
-    dispatch(fetchStudents());
-  }, [dispatch]);
+  const handleDeleteStudent = async (studentId: string) => {
+    await deleteStudent(studentId);
+    refetch();
+  };
 
   const columns: TableBaseColumn[] = [
-    { key: "id", header: "ID" },
     { key: "firstName", header: "First Name" },
     { key: "lastName", header: "Last Name" },
     { key: "age", header: "Age" },
   ];
 
-  return <TableBase columns={columns} data={students} />;
+  return <TableBase columns={columns} data={data || []} onDeleteStudent={handleDeleteStudent}/>;
 };
