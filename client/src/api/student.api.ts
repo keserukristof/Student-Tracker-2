@@ -1,13 +1,17 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 import { Student } from '../types/student.type'
+import { SERVER_DOMAIN } from '../constants/api.constants'
 
 export const studentApi = createApi({
   reducerPath: "studentApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3001" }),
+  baseQuery: fetchBaseQuery({ baseUrl: SERVER_DOMAIN }),
   endpoints: (builder) => ({
     getStudents: builder.query<Array<Student>, void>({
       query: () => "students",
+    }),
+    getStudent: builder.query<Student, string>({
+      query: (id) => `students/${id}`,
     }),
     createStudent: builder.mutation<Student, Partial<Student>>({
       query: (newStudent) => ({
@@ -15,9 +19,6 @@ export const studentApi = createApi({
         method: "POST",
         body: newStudent,
       }),
-    }),
-    getStudent: builder.query<Student, string>({
-      query: (id) => `students/${id}`,
     }),
     updateStudent: builder.mutation<Student, { id: string; changes: Partial<Student> }>({
       query: ({ id, changes }) => ({

@@ -4,7 +4,7 @@ import { StudentTable } from '../../../containers/student/StudentTable/student-t
 
 export const StudentTracker: FunctionComponent = () => {
     return (
-        <div className='home-page'>
+        <div className='student-tracker-table'>
             <StudentTable />
         </div>
     );

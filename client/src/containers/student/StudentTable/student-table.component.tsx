@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'react';
 
 import { TableBase, TableBaseColumn } from "../../../components/common/TableBase/table-base.component";
-import { useGetStudentsQuery, useDeleteStudentMutation } from '../../../apis/student.api';
+import { useGetStudentsQuery, useDeleteStudentMutation } from '../../../api/student.api';
 
 export const StudentTable: FunctionComponent = () => {
   const { data, refetch } = useGetStudentsQuery();
@@ -18,5 +18,9 @@ export const StudentTable: FunctionComponent = () => {
     { key: "age", header: "Age" },
   ];
 
-  return <TableBase columns={columns} data={data || []} onDeleteStudent={handleDeleteStudent}/>;
+  return (
+    <div className='student-tracker-table'>
+      <TableBase columns={columns} data={data || []} onDeleteStudent={handleDeleteStudent} />
+    </div>
+  );
 };

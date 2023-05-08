@@ -3,7 +3,7 @@ import './button.component.scss';
 import { ButtonVariant } from './types/button-variant.type';
 
 export interface ButtonProps {
-  label: string;
+  label: string | JSX.Element;
   onClick: () => void;
   variant: ButtonVariant;
 }
